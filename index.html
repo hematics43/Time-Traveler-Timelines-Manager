@@ -41,10 +41,9 @@ header {
     text-align: center;
     background: linear-gradient(
         135deg,
-        #111827,
-        #1e1b4b
+        #01000b
     );
-    border-bottom: 1px solid #374151;
+    border-bottom: 1px solid #e5e8ec;
 }
 
 header h1 {
@@ -55,7 +54,7 @@ header h1 {
 
 header p {
     margin: 8px 0 0;
-    color: #a5b4fc;
+    color: #a45dd3;
     font-size: 14px;
 }
 
@@ -79,22 +78,22 @@ header p {
     text-align: center;
     padding: 16px 12px;
     margin-bottom: 16px;
-    background: #111827;
-    border: 1px solid #374151;
+    background: #01040c;
+    border: 1px solid #d7d9e0;
     border-radius: 14px;
 }
 
 #currentTime {
     font-size: clamp(17px, 5vw, 24px);
     font-weight: bold;
-    color: #c4b5fd;
+    color: #eae9ec;
     line-height: 1.4;
 }
 
 #eventCount {
     margin-top: 6px;
-    color: #9ca3af;
-    font-size: 13px;
+    color: #fbfcfe;
+    font-size: 15px;
 }
 
 /* =========================================================
@@ -103,8 +102,8 @@ header p {
 
 .panel {
     width: 100%;
-    background: #111827;
-    border: 1px solid #374151;
+    background: #01050f;
+    border: 1px solid #bbbfc6;
     border-radius: 14px;
     padding: 18px;
     margin-bottom: 16px;
@@ -149,7 +148,7 @@ select {
 input:focus,
 textarea:focus,
 select:focus {
-    border-color: #818cf8;
+    border-color: #dedfe6;
 }
 
 textarea {
@@ -180,8 +179,8 @@ button {
 }
 
 .primary {
-    background: #6366f1;
-    color: white;
+    background: #050c58;
+    color: rgb(224, 213, 213);
 }
 
 .primary:hover {
@@ -285,7 +284,7 @@ button {
     top: 0;
     bottom: 0;
     width: 3px;
-    background: #4f46e5;
+    background: #d1cb18;
     transform: translateX(-50%);
 }
 
@@ -315,8 +314,8 @@ button {
     width: 17px;
     height: 17px;
     border-radius: 50%;
-    background: #818cf8;
-    border: 3px solid #0b1020;
+    background: #f9f9fc;
+    border: 3px solid #f6f7f9;
     z-index: 2;
 }
 
@@ -334,7 +333,7 @@ button {
 
 .event-card {
     width: 100%;
-    background: #1f2937;
+    background: #061203;
     border: 1px solid #374151;
     border-radius: 12px;
     padding: 15px;
@@ -343,12 +342,12 @@ button {
 }
 
 .event-card:hover {
-    border-color: #6366f1;
+    border-color: #000006;
 }
 
 .event-card h3 {
     margin: 0 0 8px;
-    color: #c4b5fd;
+    color: #ceccd7;
     font-size: 18px;
     line-height: 1.3;
     overflow-wrap: anywhere;
@@ -356,13 +355,13 @@ button {
 
 .event-date {
     font-weight: bold;
-    color: #93c5fd;
+    color: #45e748;
     font-size: 14px;
     line-height: 1.5;
 }
 
 .event-description {
-    color: #d1d5db;
+    color: #f4f5f8;
     margin: 10px 0;
     line-height: 1.5;
     white-space: pre-wrap;
@@ -374,9 +373,9 @@ button {
     max-width: 100%;
     margin: 8px 0;
     padding: 6px 9px;
-    background: #312e81;
+    background: #08056e;
     border-radius: 6px;
-    color: #ddd6fe;
+    color: #f4f4f7;
     font-size: 13px;
     overflow-wrap: anywhere;
 }
@@ -385,18 +384,18 @@ button {
     display: inline-block;
     padding: 5px 8px;
     border-radius: 6px;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: bold;
 }
 
 .past {
-    background: #3f1d1d;
-    color: #fca5a5;
+    background: #f80606;
+    color: #f5f1f1;
 }
 
-.upcoming {
-    background: #064e3b;
-    color: #a7f3d0;
+.Future {
+    background: #04f0b1;
+    color: #010d07;
 }
 
 /* =========================================================
@@ -610,9 +609,7 @@ button {
 
     <h1>⏳ Time Traveler Timeline</h1>
 
-    <p>
-        Manage your events across time
-    </p>
+    <p>Manage your events across time <BR> Note: Upload Data, Enter Data and Download Data    </p>
 
 </header>
 
@@ -764,14 +761,15 @@ button {
                 <option value="all">
                     All Events
                 </option>
-
-                <option value="upcoming">
-                    Upcoming
-                </option>
-
                 <option value="past">
                     Past
                 </option>
+
+                <option value="Future">
+                    Future
+                </option>
+
+                
 
             </select>
 
@@ -1620,7 +1618,7 @@ function displayEvents() {
 
                 if (
                     statusFilter ===
-                    "upcoming"
+                    "Future"
                 ) {
 
                     if (
@@ -1803,14 +1801,14 @@ function displayEvents() {
                         class="status ${
                             past
                                 ? "past"
-                                : "upcoming"
+                                : "Future"
                         }"
                     >
 
                         ${
                             past
                                 ? "PAST"
-                                : "UPCOMING"
+                                : "Future"
                         }
 
                     </span>
