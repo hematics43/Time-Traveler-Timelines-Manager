@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
 <title>Time Traveler Timeline</title>
+
 
 <style>
 
@@ -26,101 +32,169 @@ body {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     background: #0b1020;
+
     color: #f8fafc;
 }
+
 
 /* =========================================================
    HEADER
 ========================================================= */
 
 header {
+
     width: 100%;
+
     padding: 25px 15px;
+
     text-align: center;
-    background: linear-gradient(
-        135deg,
-        #01000b
-    );
-    border-bottom: 1px solid #e5e8ec;
+
+    background:
+        linear-gradient(
+            135deg,
+            #01000b,
+            #080614
+        );
+
+    border-bottom:
+        1px solid #e5e8ec;
 }
 
 header h1 {
+
     margin: 0;
-    font-size: clamp(24px, 7vw, 34px);
+
+    font-size:
+        clamp(
+            24px,
+            7vw,
+            34px
+        );
+
     line-height: 1.2;
 }
 
 header p {
+
     margin: 8px 0 0;
+
     color: #a45dd3;
+
     font-size: 14px;
+
+    line-height: 1.5;
 }
+
 
 /* =========================================================
    MAIN CONTAINER
 ========================================================= */
 
 .container {
+
     width: 100%;
+
     max-width: 1100px;
+
     margin: auto;
+
     padding: 16px;
 }
+
 
 /* =========================================================
    CLOCK
 ========================================================= */
 
 .clock {
+
     width: 100%;
+
     text-align: center;
+
     padding: 16px 12px;
+
     margin-bottom: 16px;
+
     background: #01040c;
-    border: 1px solid #d7d9e0;
+
+    border:
+        1px solid #d7d9e0;
+
     border-radius: 14px;
 }
 
 #currentTime {
-    font-size: clamp(17px, 5vw, 24px);
+
+    font-size:
+        clamp(
+            17px,
+            5vw,
+            24px
+        );
+
     font-weight: bold;
+
     color: #eae9ec;
+
     line-height: 1.4;
 }
 
 #eventCount {
+
     margin-top: 6px;
+
     color: #fbfcfe;
+
     font-size: 15px;
 }
+
 
 /* =========================================================
    PANELS
 ========================================================= */
 
 .panel {
+
     width: 100%;
+
     background: #01050f;
-    border: 1px solid #bbbfc6;
+
+    border:
+        1px solid #bbbfc6;
+
     border-radius: 14px;
+
     padding: 18px;
+
     margin-bottom: 16px;
 }
 
 .panel h2 {
+
     margin: 0 0 15px;
+
     font-size: 20px;
 }
+
 
 /* =========================================================
    FORM
 ========================================================= */
 
 .form-grid {
+
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-columns:
+        1fr 1fr;
+
     gap: 12px;
 }
 
@@ -128,473 +202,786 @@ input,
 textarea,
 select,
 button {
+
     font-family: inherit;
+
     font-size: 16px;
 }
 
 input,
 textarea,
 select {
+
     width: 100%;
+
     min-width: 0;
+
     padding: 13px;
-    border: 1px solid #4b5563;
+
+    border:
+        1px solid #4b5563;
+
     border-radius: 9px;
+
     background: #1f2937;
+
     color: white;
+
     outline: none;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
+
     border-color: #dedfe6;
 }
 
 textarea {
+
     min-height: 100px;
+
     resize: vertical;
 }
 
 select {
+
     cursor: pointer;
 }
 
 .full {
-    grid-column: 1 / -1;
+
+    grid-column:
+        1 / -1;
 }
+
+
+/* =========================================================
+   DATE BUILDER
+========================================================= */
+
+.date-section {
+
+    grid-column:
+        1 / -1;
+}
+
+.date-label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #aeb4c0;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.date-builder {
+
+    display: grid;
+
+    grid-template-columns:
+        100px
+        1fr
+        1fr
+        100px
+        130px;
+
+    gap: 10px;
+
+    width: 100%;
+}
+
 
 /* =========================================================
    BUTTONS
 ========================================================= */
 
 button {
+
     min-height: 46px;
+
     border: none;
+
     border-radius: 9px;
-    padding: 11px 15px;
+
+    padding:
+        11px 15px;
+
     cursor: pointer;
+
     font-weight: bold;
+
     touch-action: manipulation;
 }
 
 .primary {
+
     background: #050c58;
-    color: rgb(224, 213, 213);
+
+    color: rgb(
+        224,
+        213,
+        213
+    );
 }
 
 .primary:hover {
+
     background: #4f46e5;
 }
 
 .secondary {
+
     background: #374151;
+
     color: white;
 }
 
 .secondary:hover {
+
     background: #4b5563;
 }
 
 .danger {
+
     background: #dc2626;
+
     color: white;
 }
 
 .danger:hover {
+
     background: #b91c1c;
 }
 
 .button-row {
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
     gap: 9px;
 }
 
 .button-row button {
+
     width: 100%;
+
     font-size: 14px;
 }
+
 
 /* =========================================================
    SEARCH + FILTER
 ========================================================= */
 
 .search-box {
+
     margin-bottom: 12px;
 }
 
 .search-box input {
+
     font-size: 17px;
 }
 
 .filter-grid {
+
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
     gap: 10px;
 }
 
 .filter-item label {
+
     display: block;
+
     margin-bottom: 6px;
+
     color: #9ca3af;
+
     font-size: 12px;
+
     font-weight: bold;
 }
+
 
 /* =========================================================
    RESULT BAR
 ========================================================= */
 
 .result-bar {
+
     display: flex;
-    justify-content: space-between;
+
+    justify-content:
+        space-between;
+
     align-items: center;
+
     gap: 10px;
+
     margin-top: 14px;
-    padding: 10px 12px;
+
+    padding:
+        10px 12px;
+
     border-radius: 8px;
+
     background: #1f2937;
+
     color: #9ca3af;
+
     font-size: 13px;
 }
 
 #resultCount {
+
     color: #c4b5fd;
+
     font-weight: bold;
 }
+
+#totalCount {
+
+    color: #c4b5fd;
+
+    font-weight: bold;
+}
+
 
 /* =========================================================
    TIMELINE
 ========================================================= */
 
 .timeline {
+
     position: relative;
+
     width: 100%;
+
     margin: 20px 0;
+
     padding: 5px 0;
 }
 
-/* Central timeline */
-
 .timeline::before {
+
     content: "";
+
     position: absolute;
+
     left: 50%;
+
     top: 0;
+
     bottom: 0;
+
     width: 3px;
+
     background: #d1cb18;
-    transform: translateX(-50%);
+
+    transform:
+        translateX(-50%);
 }
 
 .timeline-item {
+
     position: relative;
+
     width: 50%;
-    padding: 12px 35px;
+
+    padding:
+        12px 35px;
 }
 
 .timeline-item.left {
+
     left: 0;
+
     text-align: right;
 }
 
 .timeline-item.right {
+
     left: 50%;
+
     text-align: left;
 }
+
 
 /* =========================================================
    TIMELINE DOT
 ========================================================= */
 
 .timeline-dot {
+
     position: absolute;
+
     top: 25px;
+
     width: 17px;
+
     height: 17px;
+
     border-radius: 50%;
+
     background: #f9f9fc;
-    border: 3px solid #f6f7f9;
+
+    border:
+        3px solid #f6f7f9;
+
     z-index: 2;
 }
 
 .left .timeline-dot {
+
     right: -9px;
 }
 
 .right .timeline-dot {
+
     left: -9px;
 }
+
 
 /* =========================================================
    EVENT CARD
 ========================================================= */
 
 .event-card {
+
     width: 100%;
+
     background: #061203;
-    border: 1px solid #374151;
+
+    border:
+        1px solid #374151;
+
     border-radius: 12px;
+
     padding: 15px;
+
     text-align: left;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+
+    box-shadow:
+        0 5px 20px
+        rgba(
+            0,
+            0,
+            0,
+            .2
+        );
 }
 
 .event-card:hover {
-    border-color: #000006;
+
+    border-color: #818cf8;
 }
 
 .event-card h3 {
-    margin: 0 0 8px;
+
+    margin:
+        0 0 8px;
+
     color: #ceccd7;
+
     font-size: 18px;
+
     line-height: 1.3;
-    overflow-wrap: anywhere;
+
+    overflow-wrap:
+        anywhere;
 }
 
 .event-date {
+
     font-weight: bold;
+
     color: #45e748;
+
     font-size: 14px;
+
     line-height: 1.5;
+
+    overflow-wrap:
+        anywhere;
 }
 
 .event-description {
+
     color: #f4f5f8;
-    margin: 10px 0;
+
+    margin:
+        10px 0;
+
     line-height: 1.5;
-    white-space: pre-wrap;
-    overflow-wrap: anywhere;
+
+    white-space:
+        pre-wrap;
+
+    overflow-wrap:
+        anywhere;
 }
 
 .countdown {
+
     display: inline-block;
+
     max-width: 100%;
+
     margin: 8px 0;
-    padding: 6px 9px;
+
+    padding:
+        6px 9px;
+
     background: #08056e;
+
     border-radius: 6px;
+
     color: #f4f4f7;
+
     font-size: 13px;
-    overflow-wrap: anywhere;
+
+    overflow-wrap:
+        anywhere;
 }
 
 .status {
+
     display: inline-block;
-    padding: 5px 8px;
+
+    padding:
+        5px 8px;
+
     border-radius: 6px;
+
     font-size: 13px;
+
     font-weight: bold;
 }
 
 .past {
+
     background: #f80606;
+
     color: #f5f1f1;
 }
 
-.Future {
+.future {
+
     background: #04f0b1;
+
     color: #010d07;
 }
+
+.historical {
+
+    background: #7c3aed;
+
+    color: white;
+}
+
 
 /* =========================================================
    EVENT BUTTONS
 ========================================================= */
 
 .event-buttons {
+
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-columns:
+        1fr 1fr;
+
     gap: 8px;
+
     margin-top: 12px;
 }
 
 .event-buttons button {
+
     width: 100%;
+
     min-height: 42px;
+
     padding: 8px;
+
     font-size: 13px;
 }
+
 
 /* =========================================================
    EMPTY STATE
 ========================================================= */
 
 .empty {
+
     text-align: center;
+
     color: #9ca3af;
-    padding: 50px 15px;
+
+    padding:
+        50px 15px;
+
     font-size: 15px;
 }
 
 #fileInput {
+
     display: none;
 }
+
 
 /* =========================================================
    MOBILE / TABLET
 ========================================================= */
 
-@media (max-width: 800px) {
+@media (
+    max-width: 800px
+) {
 
     .container {
+
         padding: 13px;
     }
 
     .form-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
     }
 
     .full {
+
         grid-column: auto;
     }
 
     .button-row {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
     }
 
     .filter-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .date-builder {
+
+        grid-template-columns:
+            1fr 1fr;
     }
 
     /*
-       Convert timeline to one column
+       Mobile timeline
     */
 
     .timeline::before {
+
         left: 12px;
+
         transform: none;
     }
 
     .timeline-item,
     .timeline-item.left,
     .timeline-item.right {
+
         width: 100%;
+
         left: 0;
-        padding: 10px 0 10px 38px;
+
+        padding:
+            10px 0 10px 38px;
+
         text-align: left;
     }
 
     .timeline-item .timeline-dot,
     .left .timeline-dot,
     .right .timeline-dot {
+
         left: 4px;
+
         right: auto;
     }
 
     .event-card {
+
         text-align: left;
     }
 }
+
 
 /* =========================================================
    SMALL PHONE
 ========================================================= */
 
-@media (max-width: 480px) {
+@media (
+    max-width: 480px
+) {
 
     header {
-        padding: 20px 12px;
+
+        padding:
+            20px 12px;
     }
 
     header h1 {
+
         font-size: 25px;
     }
 
     header p {
+
         font-size: 13px;
     }
 
     .container {
+
         padding: 9px;
     }
 
     .panel {
+
         padding: 13px;
+
         border-radius: 12px;
     }
 
     .panel h2 {
+
         font-size: 18px;
     }
 
     #currentTime {
+
         font-size: 16px;
     }
 
     input,
     textarea,
     select {
+
         font-size: 16px;
+
         padding: 12px;
     }
 
     button {
+
         min-height: 48px;
     }
 
+    .date-builder {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
     .timeline {
+
         margin-top: 12px;
     }
 
     .timeline::before {
+
         left: 10px;
+
         width: 2px;
     }
 
     .timeline-item,
     .timeline-item.left,
     .timeline-item.right {
+
         padding-left: 31px;
     }
 
     .timeline-item .timeline-dot,
     .left .timeline-dot,
     .right .timeline-dot {
+
         left: 3px;
+
         width: 15px;
+
         height: 15px;
     }
 
     .event-card {
+
         padding: 13px;
     }
 
     .event-card h3 {
+
         font-size: 17px;
     }
 
     .event-date {
+
         font-size: 13px;
     }
 
     .result-bar {
+
         flex-direction: column;
-        align-items: flex-start;
+
+        align-items:
+            flex-start;
     }
 }
+
 
 /* =========================================================
    VERY SMALL PHONE
 ========================================================= */
 
-@media (max-width: 350px) {
+@media (
+    max-width: 350px
+) {
 
     .container {
+
         padding: 7px;
     }
 
     .panel {
+
         padding: 11px;
     }
 
     .event-buttons {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .date-builder {
+
+        grid-template-columns:
+            1fr;
     }
 
 }
 
 </style>
+
 </head>
 
 
@@ -607,9 +994,15 @@ button {
 
 <header>
 
-    <h1>⏳ Time Traveler Timeline</h1>
+    <h1>
+        ⏳ Time Traveler Timeline
+    </h1>
 
-    <p>Manage your events across time <BR> Note: Upload Data, Enter Data and Download Data    </p>
+    <p>
+        Manage events across AD, BC and the future
+        <br>
+        Enter only as much date information as you know.
+    </p>
 
 </header>
 
@@ -640,9 +1033,15 @@ button {
 
 <div class="panel">
 
-    <h2>➕ Add Timeline Event</h2>
+    <h2>
+        ➕ Add Timeline Event
+    </h2>
+
 
     <div class="form-grid">
+
+
+        <!-- EVENT TITLE -->
 
         <input
             id="eventTitle"
@@ -650,16 +1049,147 @@ button {
             placeholder="Event title"
         >
 
-        <input
-            id="eventDate"
-            type="datetime-local"
-        >
+
+        <!-- DATE -->
+
+        <div class="date-section">
+
+            <label
+                class="date-label"
+            >
+                📅 Event Date
+                <small>
+                    (Year required · Month, day and time optional)
+                </small>
+            </label>
+
+
+            <div class="date-builder">
+
+
+                <!-- ERA -->
+
+                <select
+                    id="eventEra"
+                >
+
+                    <option value="AD">
+                        AD
+                    </option>
+
+                    <option value="BC">
+                        BC
+                    </option>
+
+                </select>
+
+
+                <!-- YEAR -->
+
+                <input
+                    id="eventYear"
+                    type="number"
+                    min="1"
+                    step="1"
+                    placeholder="Year *"
+                >
+
+
+                <!-- MONTH -->
+
+                <select
+                    id="eventMonth"
+                >
+
+                    <option value="">
+                        Month
+                    </option>
+
+                    <option value="1">
+                        January
+                    </option>
+
+                    <option value="2">
+                        February
+                    </option>
+
+                    <option value="3">
+                        March
+                    </option>
+
+                    <option value="4">
+                        April
+                    </option>
+
+                    <option value="5">
+                        May
+                    </option>
+
+                    <option value="6">
+                        June
+                    </option>
+
+                    <option value="7">
+                        July
+                    </option>
+
+                    <option value="8">
+                        August
+                    </option>
+
+                    <option value="9">
+                        September
+                    </option>
+
+                    <option value="10">
+                        October
+                    </option>
+
+                    <option value="11">
+                        November
+                    </option>
+
+                    <option value="12">
+                        December
+                    </option>
+
+                </select>
+
+
+                <!-- DAY -->
+
+                <input
+                    id="eventDay"
+                    type="number"
+                    min="1"
+                    max="31"
+                    step="1"
+                    placeholder="Day"
+                >
+
+
+                <!-- TIME -->
+
+                <input
+                    id="eventTime"
+                    type="time"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- DESCRIPTION -->
 
         <textarea
             id="eventDescription"
             class="full"
             placeholder="Description / notes..."
         ></textarea>
+
+
+        <!-- SAVE -->
 
         <button
             id="saveEventButton"
@@ -680,9 +1210,12 @@ button {
 
 <div class="panel">
 
-    <h2>💾 Timeline Data</h2>
+    <h2>
+        💾 Timeline Data
+    </h2>
 
     <div class="button-row">
+
 
         <button
             class="primary"
@@ -691,12 +1224,14 @@ button {
             ⬇️ Download
         </button>
 
+
         <button
             class="secondary"
             onclick="openFilePicker()"
         >
             ⬆️ Upload
         </button>
+
 
         <button
             class="danger"
@@ -706,6 +1241,7 @@ button {
         </button>
 
     </div>
+
 
     <input
         id="fileInput"
@@ -723,7 +1259,9 @@ button {
 
 <div class="panel">
 
-    <h2>🔎 Search & Sort</h2>
+    <h2>
+        🔎 Search & Sort
+    </h2>
 
 
     <!-- SEARCH -->
@@ -733,7 +1271,7 @@ button {
         <input
             id="searchInput"
             type="search"
-            placeholder="Search title, description, date..."
+            placeholder="Search title, description, AD, BC, year..."
             oninput="displayEvents()"
         >
 
@@ -745,11 +1283,13 @@ button {
     <div class="filter-grid">
 
 
-        <!-- STATUS FILTER -->
+        <!-- STATUS -->
 
         <div class="filter-item">
 
-            <label for="statusFilter">
+            <label
+                for="statusFilter"
+            >
                 EVENT STATUS
             </label>
 
@@ -761,26 +1301,31 @@ button {
                 <option value="all">
                     All Events
                 </option>
+
                 <option value="past">
                     Past
                 </option>
 
-                <option value="Future">
+                <option value="future">
                     Future
                 </option>
 
-                
+                <option value="historical">
+                    BC / Historical
+                </option>
 
             </select>
 
         </div>
 
 
-        <!-- DATE SORT -->
+        <!-- SORT -->
 
         <div class="filter-item">
 
-            <label for="sortFilter">
+            <label
+                for="sortFilter"
+            >
                 SORT BY
             </label>
 
@@ -810,11 +1355,13 @@ button {
         </div>
 
 
-        <!-- QUICK FILTER -->
+        <!-- TIME RANGE -->
 
         <div class="filter-item">
 
-            <label for="timeFilter">
+            <label
+                for="timeFilter"
+            >
                 TIME RANGE
             </label>
 
@@ -851,18 +1398,26 @@ button {
     <div class="result-bar">
 
         <span>
+
             Showing:
+
             <span id="resultCount">
                 0
             </span>
+
             events
+
         </span>
 
+
         <span>
+
             Total:
+
             <span id="totalCount">
                 0
             </span>
+
         </span>
 
     </div>
@@ -876,7 +1431,9 @@ button {
 
 <div class="panel">
 
-    <h2>🕰️ Timeline</h2>
+    <h2>
+        🕰️ Timeline
+    </h2>
 
     <div
         id="timeline"
@@ -896,11 +1453,9 @@ button {
 ========================================================= */
 
 
-/*
------------------------------------------------------------
-STORAGE
------------------------------------------------------------
-*/
+/* =========================================================
+   STORAGE
+========================================================= */
 
 const STORAGE_KEY =
     "timeTravelerTimeline";
@@ -914,11 +1469,9 @@ let editingEventId =
     null;
 
 
-/*
------------------------------------------------------------
-LOAD EVENTS
------------------------------------------------------------
-*/
+/* =========================================================
+   LOAD EVENTS
+========================================================= */
 
 function loadEvents() {
 
@@ -941,18 +1494,38 @@ function loadEvents() {
             JSON.parse(saved);
 
 
-        return Array.isArray(parsed)
-            ? parsed
-            : [];
+        if (
+            !Array.isArray(parsed)
+        ) {
+
+            return [];
+
+        }
 
 
-    } catch (error) {
+        /*
+           Normalize old and new
+           event formats.
+        */
+
+        return parsed
+            .map(
+                normalizeEvent
+            )
+            .filter(
+                event =>
+                    event !== null
+            );
+
+
+    }
+
+    catch (error) {
 
         console.error(
             "Load error:",
             error
         );
-
 
         return [];
 
@@ -961,60 +1534,330 @@ function loadEvents() {
 }
 
 
-/*
------------------------------------------------------------
-SAVE TO LOCAL BROWSER
------------------------------------------------------------
-*/
+/* =========================================================
+   NORMALIZE EVENT
+========================================================= */
+
+function normalizeEvent(event) {
+
+    if (
+        !event ||
+        !event.title
+    ) {
+
+        return null;
+
+    }
+
+
+    /*
+       NEW FORMAT
+    */
+
+    if (
+        event.year &&
+        event.era
+    ) {
+
+        return {
+
+            id:
+                event.id ||
+                Date.now() +
+                Math.random(),
+
+            title:
+                String(
+                    event.title
+                ),
+
+            era:
+                event.era === "BC"
+                    ? "BC"
+                    : "AD",
+
+            year:
+                Number(
+                    event.year
+                ),
+
+            month:
+                event.month
+                    ? Number(
+                        event.month
+                    )
+                    : null,
+
+            day:
+                event.day
+                    ? Number(
+                        event.day
+                    )
+                    : null,
+
+            time:
+                event.time ||
+                null,
+
+            description:
+                String(
+                    event.description ||
+                    ""
+                )
+
+        };
+
+    }
+
+
+    /*
+       OLD FORMAT SUPPORT
+
+       Old events used:
+
+       event.date =
+       "2026-08-15T12:00"
+    */
+
+    if (event.date) {
+
+        const oldDate =
+            new Date(
+                event.date
+            );
+
+
+        if (
+            !isNaN(
+                oldDate.getTime()
+            )
+        ) {
+
+            return {
+
+                id:
+                    event.id ||
+                    Date.now() +
+                    Math.random(),
+
+                title:
+                    String(
+                        event.title
+                    ),
+
+                era:
+                    "AD",
+
+                year:
+                    oldDate.getFullYear(),
+
+                month:
+                    oldDate.getMonth() + 1,
+
+                day:
+                    oldDate.getDate(),
+
+                time:
+                    oldDate
+                        .toTimeString()
+                        .slice(
+                            0,
+                            5
+                        ),
+
+                description:
+                    String(
+                        event.description ||
+                        ""
+                    )
+
+            };
+
+        }
+
+    }
+
+
+    return null;
+
+}
+
+
+/* =========================================================
+   SAVE EVENTS
+========================================================= */
 
 function saveEvents() {
 
     localStorage.setItem(
+
         STORAGE_KEY,
-        JSON.stringify(events)
+
+        JSON.stringify(
+            events
+        )
+
     );
 
 }
 
 
-/*
------------------------------------------------------------
-ADD EVENT
------------------------------------------------------------
-*/
+/* =========================================================
+   ADD EVENT
+========================================================= */
 
 function addEvent() {
 
     const title =
         document
-            .getElementById("eventTitle")
+            .getElementById(
+                "eventTitle"
+            )
             .value
             .trim();
 
 
-    const date =
+    const era =
         document
-            .getElementById("eventDate")
+            .getElementById(
+                "eventEra"
+            )
+            .value;
+
+
+    const year =
+        parseInt(
+
+            document
+                .getElementById(
+                    "eventYear"
+                )
+                .value,
+
+            10
+
+        );
+
+
+    const month =
+        document
+            .getElementById(
+                "eventMonth"
+            )
+            .value;
+
+
+    const day =
+        document
+            .getElementById(
+                "eventDay"
+            )
+            .value;
+
+
+    const time =
+        document
+            .getElementById(
+                "eventTime"
+            )
             .value;
 
 
     const description =
         document
-            .getElementById("eventDescription")
+            .getElementById(
+                "eventDescription"
+            )
             .value
             .trim();
 
 
-    if (!title || !date) {
+    if (!title) {
 
         alert(
-            "Please enter an event title and date/time."
+            "Please enter an event title."
         );
 
         return;
 
     }
 
+
+    if (
+        !year ||
+        year < 1
+    ) {
+
+        alert(
+            "Please enter a valid year."
+        );
+
+        return;
+
+    }
+
+
+    /*
+       A day requires a month.
+    */
+
+    if (
+        day &&
+        !month
+    ) {
+
+        alert(
+            "Please select a month when entering a day."
+        );
+
+        return;
+
+    }
+
+
+    /*
+       Validate day.
+    */
+
+    if (
+        month &&
+        day
+    ) {
+
+        const maxDay =
+            new Date(
+
+                2000,
+
+                Number(month),
+
+                0
+
+            ).getDate();
+
+
+        if (
+
+            Number(day) < 1 ||
+
+            Number(day) > maxDay
+
+        ) {
+
+            alert(
+                "Please enter a valid day."
+            );
+
+            return;
+
+        }
+
+    }
+
+
+    /*
+       Create event.
+    */
 
     const newEvent = {
 
@@ -1025,8 +1868,25 @@ function addEvent() {
         title:
             title,
 
-        date:
-            date,
+        era:
+            era,
+
+        year:
+            year,
+
+        month:
+            month
+                ? Number(month)
+                : null,
+
+        day:
+            day
+                ? Number(day)
+                : null,
+
+        time:
+            time ||
+            null,
 
         description:
             description
@@ -1048,37 +1908,66 @@ function addEvent() {
 }
 
 
-/*
------------------------------------------------------------
-CLEAR FORM
------------------------------------------------------------
-*/
+/* =========================================================
+   CLEAR FORM
+========================================================= */
 
 function clearForm() {
 
     document
-        .getElementById("eventTitle")
+        .getElementById(
+            "eventTitle"
+        )
         .value = "";
 
 
     document
-        .getElementById("eventDate")
+        .getElementById(
+            "eventEra"
+        )
+        .value = "AD";
+
+
+    document
+        .getElementById(
+            "eventYear"
+        )
         .value = "";
 
 
     document
-        .getElementById("eventDescription")
+        .getElementById(
+            "eventMonth"
+        )
         .value = "";
 
+
+    document
+        .getElementById(
+            "eventDay"
+        )
+        .value = "";
+
+
+    document
+        .getElementById(
+            "eventTime"
+        )
+        .value = "";
+
+
+    document
+        .getElementById(
+            "eventDescription"
+        )
+        .value = "";
 
 }
 
 
-/*
------------------------------------------------------------
-EDIT EVENT
------------------------------------------------------------
-*/
+/* =========================================================
+   EDIT EVENT
+========================================================= */
 
 function editEvent(id) {
 
@@ -1097,21 +1986,59 @@ function editEvent(id) {
 
 
     document
-        .getElementById("eventTitle")
+        .getElementById(
+            "eventTitle"
+        )
         .value =
-        event.title;
+        event.title || "";
 
 
     document
-        .getElementById("eventDate")
+        .getElementById(
+            "eventEra"
+        )
         .value =
-        event.date;
+        event.era || "AD";
 
 
     document
-        .getElementById("eventDescription")
+        .getElementById(
+            "eventYear"
+        )
         .value =
-        event.description;
+        event.year || "";
+
+
+    document
+        .getElementById(
+            "eventMonth"
+        )
+        .value =
+        event.month || "";
+
+
+    document
+        .getElementById(
+            "eventDay"
+        )
+        .value =
+        event.day || "";
+
+
+    document
+        .getElementById(
+            "eventTime"
+        )
+        .value =
+        event.time || "";
+
+
+    document
+        .getElementById(
+            "eventDescription"
+        )
+        .value =
+        event.description || "";
 
 
     editingEventId =
@@ -1133,48 +2060,147 @@ function editEvent(id) {
 
 
     window.scrollTo({
+
         top: 0,
-        behavior: "smooth"
+
+        behavior:
+            "smooth"
+
     });
 
 }
 
 
-/*
------------------------------------------------------------
-SAVE EDITED EVENT
------------------------------------------------------------
-*/
+/* =========================================================
+   SAVE EDITED EVENT
+========================================================= */
 
 function saveEditedEvent() {
 
     const title =
         document
-            .getElementById("eventTitle")
+            .getElementById(
+                "eventTitle"
+            )
             .value
             .trim();
 
 
-    const date =
+    const era =
         document
-            .getElementById("eventDate")
+            .getElementById(
+                "eventEra"
+            )
+            .value;
+
+
+    const year =
+        parseInt(
+
+            document
+                .getElementById(
+                    "eventYear"
+                )
+                .value,
+
+            10
+
+        );
+
+
+    const month =
+        document
+            .getElementById(
+                "eventMonth"
+            )
+            .value;
+
+
+    const day =
+        document
+            .getElementById(
+                "eventDay"
+            )
+            .value;
+
+
+    const time =
+        document
+            .getElementById(
+                "eventTime"
+            )
             .value;
 
 
     const description =
         document
-            .getElementById("eventDescription")
+            .getElementById(
+                "eventDescription"
+            )
             .value
             .trim();
 
 
-    if (!title || !date) {
+    if (
+        !title ||
+        !year
+    ) {
 
         alert(
-            "Please enter an event title and date/time."
+            "Please enter a title and year."
         );
 
         return;
+
+    }
+
+
+    if (
+        day &&
+        !month
+    ) {
+
+        alert(
+            "Please select a month when entering a day."
+        );
+
+        return;
+
+    }
+
+
+    if (
+        month &&
+        day
+    ) {
+
+        const maxDay =
+            new Date(
+
+                2000,
+
+                Number(month),
+
+                0
+
+            ).getDate();
+
+
+        if (
+
+            Number(day) < 1 ||
+
+            Number(day) > maxDay
+
+        ) {
+
+            alert(
+                "Please enter a valid day."
+            );
+
+            return;
+
+        }
 
     }
 
@@ -1192,8 +2218,25 @@ function saveEditedEvent() {
         event.title =
             title;
 
-        event.date =
-            date;
+        event.era =
+            era;
+
+        event.year =
+            year;
+
+        event.month =
+            month
+                ? Number(month)
+                : null;
+
+        event.day =
+            day
+                ? Number(day)
+                : null;
+
+        event.time =
+            time ||
+            null;
 
         event.description =
             description;
@@ -1210,20 +2253,16 @@ function saveEditedEvent() {
 
     clearForm();
 
-
     resetAddButton();
-
 
     displayEvents();
 
 }
 
 
-/*
------------------------------------------------------------
-RESET ADD BUTTON
------------------------------------------------------------
-*/
+/* =========================================================
+   RESET ADD BUTTON
+========================================================= */
 
 function resetAddButton() {
 
@@ -1243,11 +2282,9 @@ function resetAddButton() {
 }
 
 
-/*
------------------------------------------------------------
-DELETE EVENT
------------------------------------------------------------
-*/
+/* =========================================================
+   DELETE EVENT
+========================================================= */
 
 function deleteEvent(id) {
 
@@ -1264,40 +2301,472 @@ function deleteEvent(id) {
 
     events =
         events.filter(
+
             event =>
                 event.id !== id
+
         );
 
 
     saveEvents();
-
 
     displayEvents();
 
 }
 
 
-/*
------------------------------------------------------------
-STATUS CHECK
------------------------------------------------------------
-*/
+/* =========================================================
+   ASTRONOMICAL YEAR
+=========================================================
 
-function isPast(event) {
+   AD 1 = 1
+   AD 2 = 2
 
-    return (
-        new Date(event.date) <
-        new Date()
+   BC 1 = 0
+   BC 2 = -1
+   BC 44 = -43
+
+   Used internally only.
+========================================================= */
+
+function astronomicalYear(event) {
+
+    if (
+        event.era === "BC"
+    ) {
+
+        return (
+            1 -
+            Number(event.year)
+        );
+
+    }
+
+
+    return Number(
+        event.year
     );
 
 }
 
 
-/*
------------------------------------------------------------
-SEARCH TEXT
------------------------------------------------------------
-*/
+/* =========================================================
+   DATE PRECISION
+========================================================= */
+
+function datePrecision(event) {
+
+    /*
+       Year only
+    */
+
+    if (
+        !event.month
+    ) {
+
+        return 1;
+
+    }
+
+
+    /*
+       Year + month
+    */
+
+    if (
+        !event.day
+    ) {
+
+        return 2;
+
+    }
+
+
+    /*
+       Complete date
+    */
+
+    if (
+        !event.time
+    ) {
+
+        return 3;
+
+    }
+
+
+    /*
+       Complete date + time
+    */
+
+    return 4;
+
+}
+
+
+/* =========================================================
+   HISTORICAL SORT VALUE
+========================================================= */
+
+function historicalSortValue(event) {
+
+    const year =
+        astronomicalYear(
+            event
+        );
+
+
+    const month =
+        event.month
+            ? Number(
+                event.month
+            )
+            : 1;
+
+
+    const day =
+        event.day
+            ? Number(
+                event.day
+            )
+            : 1;
+
+
+    /*
+       Precision is NOT used as
+       chronological significance.
+
+       It is only a small tie-breaker.
+    */
+
+    return (
+
+        year *
+            100000000 +
+
+        month *
+            1000000 +
+
+        day *
+            1000 +
+
+        datePrecision(
+            event
+        )
+
+    );
+
+}
+
+
+/* =========================================================
+   FORMAT HISTORICAL DATE
+========================================================= */
+
+function formatHistoricalDate(event) {
+
+    let result =
+        event.era +
+        " " +
+        event.year;
+
+
+    const months = [
+
+        "",
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+
+    ];
+
+
+    if (
+        event.month
+    ) {
+
+        result +=
+            ", " +
+            months[
+                Number(
+                    event.month
+                )
+            ];
+
+    }
+
+
+    if (
+        event.day
+    ) {
+
+        result +=
+            " " +
+            event.day;
+
+    }
+
+
+    if (
+        event.time
+    ) {
+
+        result +=
+            " · " +
+            event.time;
+
+    }
+
+
+    return result;
+
+}
+
+
+/* =========================================================
+   CAN COUNTDOWN
+========================================================= */
+
+function canCountdown(event) {
+
+    return (
+
+        event.era === "AD" &&
+
+        event.month &&
+
+        event.day
+
+    );
+
+}
+
+
+/* =========================================================
+   CONVERT AD EVENT TO JS DATE
+========================================================= */
+
+function eventToJSDate(event) {
+
+    if (
+        !canCountdown(event)
+    ) {
+
+        return null;
+
+    }
+
+
+    const year =
+        Number(
+            event.year
+        );
+
+
+    const month =
+        Number(
+            event.month
+        ) - 1;
+
+
+    const day =
+        Number(
+            event.day
+        );
+
+
+    const date =
+        new Date(0);
+
+
+    /*
+       setFullYear avoids JS's
+       special 0-99 year behavior.
+    */
+
+    date.setFullYear(
+
+        year,
+
+        month,
+
+        day
+
+    );
+
+
+    if (
+        event.time
+    ) {
+
+        const parts =
+            event.time
+                .split(":");
+
+
+        date.setHours(
+
+            Number(
+                parts[0]
+            ),
+
+            Number(
+                parts[1]
+            ),
+
+            0,
+
+            0
+
+        );
+
+    }
+
+    else {
+
+        date.setHours(
+
+            0,
+
+            0,
+
+            0,
+
+            0
+
+        );
+
+    }
+
+
+    return date;
+
+}
+
+
+/* =========================================================
+   CURRENT DATE AS EVENT
+========================================================= */
+
+function currentDateAsEvent() {
+
+    const now =
+        new Date();
+
+
+    return {
+
+        era:
+            "AD",
+
+        year:
+            now.getFullYear(),
+
+        month:
+            now.getMonth() + 1,
+
+        day:
+            now.getDate(),
+
+        time:
+            now.toTimeString()
+                .slice(
+                    0,
+                    5
+                )
+
+    };
+
+}
+
+
+/* =========================================================
+   EVENT STATUS
+========================================================= */
+
+function getEventStatus(event) {
+
+    /*
+       BC = historical
+    */
+
+    if (
+        event.era === "BC"
+    ) {
+
+        return "historical";
+
+    }
+
+
+    /*
+       Compare complete AD
+       dates normally.
+    */
+
+    if (
+        canCountdown(event)
+    ) {
+
+        return (
+
+            eventToJSDate(event)
+            <
+            new Date()
+
+        )
+            ? "past"
+            : "future";
+
+    }
+
+
+    /*
+       Partial AD dates.
+       Compare by year/month/day
+       where available.
+    */
+
+    const eventValue =
+        historicalSortValue(
+            event
+        );
+
+
+    const nowEvent =
+        currentDateAsEvent();
+
+
+    const nowValue =
+        historicalSortValue(
+            nowEvent
+        );
+
+
+    return (
+
+        eventValue <
+        nowValue
+
+    )
+        ? "past"
+        : "future";
+
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
 
 function matchesSearch(
     event,
@@ -1317,11 +2786,19 @@ function matchesSearch(
 
         event.description,
 
-        event.date,
+        formatHistoricalDate(
+            event
+        ),
 
-        new Date(
-            event.date
-        ).toLocaleString()
+        event.era,
+
+        event.year,
+
+        event.month,
+
+        event.day,
+
+        event.time
 
     ]
         .join(" ")
@@ -1335,27 +2812,41 @@ function matchesSearch(
 }
 
 
-/*
------------------------------------------------------------
-TIME RANGE FILTER
------------------------------------------------------------
-*/
+/* =========================================================
+   TIME RANGE FILTER
+========================================================= */
 
 function matchesTimeRange(
     event,
     filter
 ) {
 
-    if (filter === "all") {
+    if (
+        filter === "all"
+    ) {
 
         return true;
 
     }
 
 
+    /*
+       Time-range filters require
+       complete modern AD dates.
+    */
+
+    if (
+        !canCountdown(event)
+    ) {
+
+        return false;
+
+    }
+
+
     const eventDate =
-        new Date(
-            event.date
+        eventToJSDate(
+            event
         );
 
 
@@ -1364,70 +2855,102 @@ function matchesTimeRange(
 
 
     /*
-    TODAY
+       TODAY
     */
 
-    if (filter === "today") {
+    if (
+        filter === "today"
+    ) {
 
         return (
-            eventDate.getFullYear() ===
-                now.getFullYear()
+
+            eventDate
+                .getFullYear()
+            ===
+            now.getFullYear()
 
             &&
 
-            eventDate.getMonth() ===
-                now.getMonth()
+            eventDate
+                .getMonth()
+            ===
+            now.getMonth()
 
             &&
 
-            eventDate.getDate() ===
-                now.getDate()
+            eventDate
+                .getDate()
+            ===
+            now.getDate()
+
         );
 
     }
 
 
     /*
-    NEXT 7 DAYS
+       NEXT 7 DAYS
     */
 
-    if (filter === "week") {
+    if (
+        filter === "week"
+    ) {
 
         const end =
-            new Date(now);
+            new Date(
+                now
+            );
 
 
         end.setDate(
-            end.getDate() + 7
+
+            end.getDate()
+            +
+            7
+
         );
 
 
         return (
+
             eventDate >= now &&
+
             eventDate <= end
+
         );
 
     }
 
 
     /*
-    NEXT 30 DAYS
+       NEXT 30 DAYS
     */
 
-    if (filter === "month") {
+    if (
+        filter === "month"
+    ) {
 
         const end =
-            new Date(now);
+            new Date(
+                now
+            );
 
 
         end.setDate(
-            end.getDate() + 30
+
+            end.getDate()
+            +
+            30
+
         );
 
 
         return (
+
             eventDate >= now &&
+
             eventDate <= end
+
         );
 
     }
@@ -1438,11 +2961,9 @@ function matchesTimeRange(
 }
 
 
-/*
------------------------------------------------------------
-SORT EVENTS
------------------------------------------------------------
-*/
+/* =========================================================
+   SORT EVENTS
+========================================================= */
 
 function sortEvents(
     list,
@@ -1459,9 +2980,13 @@ function sortEvents(
     ) {
 
         sorted.sort(
+
             (a, b) =>
-                new Date(a.date) -
-                new Date(b.date)
+
+                historicalSortValue(a)
+                -
+                historicalSortValue(b)
+
         );
 
     }
@@ -1473,9 +2998,13 @@ function sortEvents(
     ) {
 
         sorted.sort(
+
             (a, b) =>
-                new Date(b.date) -
-                new Date(a.date)
+
+                historicalSortValue(b)
+                -
+                historicalSortValue(a)
+
         );
 
     }
@@ -1487,16 +3016,22 @@ function sortEvents(
     ) {
 
         sorted.sort(
+
             (a, b) =>
-                a.title
-                    .localeCompare(
-                        b.title,
-                        undefined,
-                        {
-                            sensitivity:
-                                "base"
-                        }
-                    )
+
+                a.title.localeCompare(
+
+                    b.title,
+
+                    undefined,
+
+                    {
+                        sensitivity:
+                            "base"
+                    }
+
+                )
+
         );
 
     }
@@ -1508,16 +3043,22 @@ function sortEvents(
     ) {
 
         sorted.sort(
+
             (a, b) =>
-                b.title
-                    .localeCompare(
-                        a.title,
-                        undefined,
-                        {
-                            sensitivity:
-                                "base"
-                        }
-                    )
+
+                b.title.localeCompare(
+
+                    a.title,
+
+                    undefined,
+
+                    {
+                        sensitivity:
+                            "base"
+                    }
+
+                )
+
         );
 
     }
@@ -1528,11 +3069,9 @@ function sortEvents(
 }
 
 
-/*
------------------------------------------------------------
-DISPLAY EVENTS
------------------------------------------------------------
-*/
+/* =========================================================
+   DISPLAY EVENTS
+========================================================= */
 
 function displayEvents() {
 
@@ -1553,27 +3092,31 @@ function displayEvents() {
 
 
     const statusFilter =
-        document.getElementById(
-            "statusFilter"
-        ).value;
+        document
+            .getElementById(
+                "statusFilter"
+            )
+            .value;
 
 
     const sortFilter =
-        document.getElementById(
-            "sortFilter"
-        ).value;
+        document
+            .getElementById(
+                "sortFilter"
+            )
+            .value;
 
 
     const timeFilter =
-        document.getElementById(
-            "timeFilter"
-        ).value;
+        document
+            .getElementById(
+                "timeFilter"
+            )
+            .value;
 
 
     /*
-    -------------------------------------------------------
-    FILTER
-    -------------------------------------------------------
+       FILTER
     */
 
     let filtered =
@@ -1581,7 +3124,7 @@ function displayEvents() {
             event => {
 
                 /*
-                SEARCH
+                   SEARCH
                 */
 
                 if (
@@ -1597,32 +3140,23 @@ function displayEvents() {
 
 
                 /*
-                STATUS
+                   STATUS
                 */
 
-                if (
-                    statusFilter ===
-                    "past"
-                ) {
-
-                    if (
-                        !isPast(event)
-                    ) {
-
-                        return false;
-
-                    }
-
-                }
+                const status =
+                    getEventStatus(
+                        event
+                    );
 
 
                 if (
-                    statusFilter ===
-                    "Future"
+                    statusFilter !==
+                    "all"
                 ) {
 
                     if (
-                        isPast(event)
+                        statusFilter !==
+                        status
                     ) {
 
                         return false;
@@ -1633,7 +3167,7 @@ function displayEvents() {
 
 
                 /*
-                TIME RANGE
+                   TIME RANGE
                 */
 
                 if (
@@ -1655,22 +3189,21 @@ function displayEvents() {
 
 
     /*
-    -------------------------------------------------------
-    SORT
-    -------------------------------------------------------
+       SORT
     */
 
     filtered =
         sortEvents(
+
             filtered,
+
             sortFilter
+
         );
 
 
     /*
-    -------------------------------------------------------
-    COUNTERS
-    -------------------------------------------------------
+       COUNTERS
     */
 
     document.getElementById(
@@ -1688,18 +3221,22 @@ function displayEvents() {
     document.getElementById(
         "eventCount"
     ).textContent =
+
         events.length +
+
         (
+
             events.length === 1
+
                 ? " event"
+
                 : " events"
+
         );
 
 
     /*
-    -------------------------------------------------------
-    EMPTY
-    -------------------------------------------------------
+       EMPTY
     */
 
     if (
@@ -1728,31 +3265,28 @@ function displayEvents() {
 
 
     /*
-    -------------------------------------------------------
-    BUILD TIMELINE
-    -------------------------------------------------------
+       BUILD TIMELINE
     */
 
     timeline.innerHTML = "";
 
 
     filtered.forEach(
+
         (event, index) => {
 
-            const eventDate =
-                new Date(
-                    event.date
+
+            const status =
+                getEventStatus(
+                    event
                 );
-
-
-            const past =
-                eventDate <
-                new Date();
 
 
             const side =
                 index % 2 === 0
+
                     ? "left"
+
                     : "right";
 
 
@@ -1766,6 +3300,51 @@ function displayEvents() {
                 `timeline-item ${side}`;
 
 
+            /*
+               Status text
+            */
+
+            let statusText;
+
+
+            if (
+                status ===
+                "historical"
+            ) {
+
+                statusText =
+                    "HISTORICAL";
+
+            }
+
+            else if (
+                status ===
+                "past"
+            ) {
+
+                statusText =
+                    "PAST";
+
+            }
+
+            else {
+
+                statusText =
+                    "FUTURE";
+
+            }
+
+
+            /*
+               Countdown
+            */
+
+            const countdown =
+                getCountdown(
+                    event
+                );
+
+
             item.innerHTML = `
 
                 <div
@@ -1777,20 +3356,28 @@ function displayEvents() {
                     class="event-card"
                 >
 
+
                     <h3>
+
                         ${escapeHTML(
                             event.title
                         )}
+
                     </h3>
 
 
                     <div
                         class="event-date"
                     >
+
                         📅
-                        ${formatDate(
-                            eventDate
+
+                        ${escapeHTML(
+                            formatHistoricalDate(
+                                event
+                            )
                         )}
+
                     </div>
 
 
@@ -1798,18 +3385,10 @@ function displayEvents() {
 
 
                     <span
-                        class="status ${
-                            past
-                                ? "past"
-                                : "Future"
-                        }"
+                        class="status ${status}"
                     >
 
-                        ${
-                            past
-                                ? "PAST"
-                                : "Future"
-                        }
+                        ${statusText}
 
                     </span>
 
@@ -1819,13 +3398,10 @@ function displayEvents() {
 
                     <div
                         class="countdown"
-                        data-date="${
-                            event.date
-                        }"
                     >
 
-                        ${getCountdown(
-                            eventDate
+                        ${escapeHTML(
+                            countdown
                         )}
 
                     </div>
@@ -1833,18 +3409,23 @@ function displayEvents() {
 
                     ${
                         event.description
+
                             ? `
 
-                        <div
-                            class="event-description"
-                        >
-                            ${escapeHTML(
-                                event.description
-                            )}
-                        </div>
+                                <div
+                                    class="event-description"
+                                >
 
-                        `
+                                    ${escapeHTML(
+                                        event.description
+                                    )}
+
+                                </div>
+
+                              `
+
                             : ""
+
                     }
 
 
@@ -1852,13 +3433,16 @@ function displayEvents() {
                         class="event-buttons"
                     >
 
+
                         <button
                             class="secondary"
                             onclick="editEvent(
                                 ${event.id}
                             )"
                         >
+
                             ✏️ Edit
+
                         </button>
 
 
@@ -1868,10 +3452,14 @@ function displayEvents() {
                                 ${event.id}
                             )"
                         >
+
                             🗑️ Delete
+
                         </button>
 
+
                     </div>
+
 
                 </div>
 
@@ -1883,49 +3471,82 @@ function displayEvents() {
             );
 
         }
+
     );
 
 }
 
 
-/*
------------------------------------------------------------
-FORMAT DATE
------------------------------------------------------------
-*/
+/* =========================================================
+   COUNTDOWN
+========================================================= */
 
-function formatDate(date) {
+function getCountdown(event) {
 
-    return date.toLocaleString(
-        undefined,
-        {
-            year:
-                "numeric",
+    /*
+       BC events do not get a
+       misleading modern countdown.
+    */
 
-            month:
-                "long",
+    if (
+        event.era === "BC"
+    ) {
 
-            day:
-                "numeric",
+        return (
+            "🏛️ Historical BC date"
+        );
 
-            hour:
-                "2-digit",
-
-            minute:
-                "2-digit"
-        }
-    );
-
-}
+    }
 
 
-/*
------------------------------------------------------------
-COUNTDOWN
------------------------------------------------------------
-*/
+    /*
+       Year only
+    */
 
-function getCountdown(date) {
+    if (
+        !event.month
+    ) {
+
+        return (
+            "📅 Year only"
+        );
+
+    }
+
+
+    /*
+       Month only
+    */
+
+    if (
+        !event.day
+    ) {
+
+        return (
+            "📅 Month only"
+        );
+
+    }
+
+
+    /*
+       Complete AD date
+    */
+
+    const date =
+        eventToJSDate(
+            event
+        );
+
+
+    if (!date) {
+
+        return (
+            "📅 Historical date"
+        );
+
+    }
+
 
     const now =
         new Date();
@@ -1946,32 +3567,38 @@ function getCountdown(date) {
 
 
         return (
+
             "⏱️ " +
+
             formatDuration(
                 difference
             ) +
+
             " ago"
+
         );
 
     }
 
 
     return (
+
         "⏳ " +
+
         formatDuration(
             difference
         ) +
+
         " remaining"
+
     );
 
 }
 
 
-/*
------------------------------------------------------------
-FORMAT DURATION
------------------------------------------------------------
-*/
+/* =========================================================
+   FORMAT DURATION
+========================================================= */
 
 function formatDuration(
     milliseconds
@@ -1979,13 +3606,19 @@ function formatDuration(
 
     let seconds =
         Math.floor(
-            milliseconds / 1000
+
+            milliseconds /
+            1000
+
         );
 
 
     const days =
         Math.floor(
-            seconds / 86400
+
+            seconds /
+            86400
+
         );
 
 
@@ -1995,7 +3628,10 @@ function formatDuration(
 
     const hours =
         Math.floor(
-            seconds / 3600
+
+            seconds /
+            3600
+
         );
 
 
@@ -2005,7 +3641,10 @@ function formatDuration(
 
     const minutes =
         Math.floor(
-            seconds / 60
+
+            seconds /
+            60
+
         );
 
 
@@ -2044,8 +3683,11 @@ function formatDuration(
 
 
     if (
+
         seconds ||
+
         parts.length === 0
+
     ) {
 
         parts.push(
@@ -2055,16 +3697,16 @@ function formatDuration(
     }
 
 
-    return parts.join(" ");
+    return parts.join(
+        " "
+    );
 
 }
 
 
-/*
------------------------------------------------------------
-DOWNLOAD JSON
------------------------------------------------------------
-*/
+/* =========================================================
+   DOWNLOAD DATA
+========================================================= */
 
 function downloadData() {
 
@@ -2074,7 +3716,10 @@ function downloadData() {
             "Time Traveler Timeline",
 
         version:
-            1,
+            2,
+
+        dateFormat:
+            "AD/BC flexible date",
 
         exportedAt:
             new Date()
@@ -2088,19 +3733,26 @@ function downloadData() {
 
     const json =
         JSON.stringify(
+
             backup,
+
             null,
+
             2
+
         );
 
 
     const blob =
         new Blob(
+
             [json],
+
             {
                 type:
                     "application/json"
             }
+
         );
 
 
@@ -2153,11 +3805,9 @@ function downloadData() {
 }
 
 
-/*
------------------------------------------------------------
-OPEN FILE PICKER
------------------------------------------------------------
-*/
+/* =========================================================
+   OPEN FILE PICKER
+========================================================= */
 
 function openFilePicker() {
 
@@ -2170,11 +3820,9 @@ function openFilePicker() {
 }
 
 
-/*
------------------------------------------------------------
-UPLOAD JSON
------------------------------------------------------------
-*/
+/* =========================================================
+   UPLOAD DATA
+========================================================= */
 
 function uploadData(event) {
 
@@ -2208,28 +3856,28 @@ function uploadData(event) {
 
 
                 /*
-                Support:
-
-                {
-                    events: [...]
-                }
-
-                OR
-
-                [...]
+                   Backup format
                 */
 
                 if (
+
                     data &&
+
                     Array.isArray(
                         data.events
                     )
+
                 ) {
 
                     importedEvents =
                         data.events;
 
                 }
+
+
+                /*
+                   Raw array format
+                */
 
                 else if (
                     Array.isArray(
@@ -2242,6 +3890,7 @@ function uploadData(event) {
 
                 }
 
+
                 else {
 
                     throw new Error(
@@ -2252,17 +3901,23 @@ function uploadData(event) {
 
 
                 importedEvents =
-                    importedEvents.filter(
-                        event =>
-                            event &&
-                            event.title &&
-                            event.date
-                    );
+                    importedEvents
+
+                        .map(
+                            normalizeEvent
+                        )
+
+                        .filter(
+                            event =>
+                                event !== null
+                        );
 
 
                 if (
                     !confirm(
+
                         `Import ${importedEvents.length} events?`
+
                     )
                 ) {
 
@@ -2272,36 +3927,10 @@ function uploadData(event) {
 
 
                 events =
-                    importedEvents.map(
-                        event => ({
-
-                            id:
-                                event.id ||
-                                Date.now() +
-                                Math.random(),
-
-                            title:
-                                String(
-                                    event.title
-                                ),
-
-                            date:
-                                String(
-                                    event.date
-                                ),
-
-                            description:
-                                String(
-                                    event.description ||
-                                    ""
-                                )
-
-                        })
-                    );
+                    importedEvents;
 
 
                 saveEvents();
-
 
                 displayEvents();
 
@@ -2316,8 +3945,11 @@ function uploadData(event) {
             catch (error) {
 
                 alert(
+
                     "Could not import file.\n\n" +
+
                     error.message
+
                 );
 
             }
@@ -2331,8 +3963,8 @@ function uploadData(event) {
 
 
     /*
-    Allow same file
-    to be selected again
+       Allow the same file
+       to be selected again.
     */
 
     event.target.value = "";
@@ -2340,11 +3972,9 @@ function uploadData(event) {
 }
 
 
-/*
------------------------------------------------------------
-CLEAR ALL
------------------------------------------------------------
-*/
+/* =========================================================
+   CLEAR ALL EVENTS
+========================================================= */
 
 function clearAllEvents() {
 
@@ -2363,7 +3993,11 @@ function clearAllEvents() {
 
     const confirmation =
         confirm(
-            "Delete ALL timeline events?\n\nThis cannot be undone unless you have a downloaded backup."
+
+            "Delete ALL timeline events?\n\n" +
+
+            "This cannot be undone unless you have a downloaded backup."
+
         );
 
 
@@ -2387,11 +4021,9 @@ function clearAllEvents() {
 }
 
 
-/*
------------------------------------------------------------
-LIVE CLOCK
------------------------------------------------------------
-*/
+/* =========================================================
+   LIVE CLOCK
+========================================================= */
 
 function updateClock() {
 
@@ -2402,9 +4034,13 @@ function updateClock() {
     document.getElementById(
         "currentTime"
     ).textContent =
+
         now.toLocaleString(
+
             undefined,
+
             {
+
                 weekday:
                     "long",
 
@@ -2425,12 +4061,16 @@ function updateClock() {
 
                 second:
                     "2-digit"
+
             }
+
         );
 
 
     /*
-    Update countdowns
+       Refresh timeline every second
+       so status/countdowns remain
+       accurate.
     */
 
     document
@@ -2440,28 +4080,114 @@ function updateClock() {
         .forEach(
             element => {
 
-                const date =
-                    new Date(
-                        element.dataset.date
-                    );
-
-
-                element.textContent =
-                    getCountdown(
-                        date
-                    );
+                /*
+                   We rebuild the countdown
+                   from the matching event
+                   instead of storing dates
+                   in the DOM.
+                */
 
             }
         );
 
+
+    /*
+       Re-render every second only
+       when there are complete AD
+       events. This keeps countdowns
+       live.
+    */
+
+    if (
+        events.some(
+            event =>
+                canCountdown(
+                    event
+                )
+        )
+    ) {
+
+        updateCountdownDisplays();
+
+    }
+
 }
 
 
-/*
------------------------------------------------------------
-HTML ESCAPING
------------------------------------------------------------
-*/
+/* =========================================================
+   UPDATE COUNTDOWN DISPLAY
+========================================================= */
+
+function updateCountdownDisplays() {
+
+    const cards =
+        document.querySelectorAll(
+            ".event-card"
+        );
+
+
+    cards.forEach(
+        card => {
+
+            const title =
+                card.querySelector(
+                    "h3"
+                );
+
+
+            if (!title) {
+
+                return;
+
+            }
+
+
+            const event =
+                events.find(
+
+                    item =>
+
+                        escapeHTML(
+                            item.title
+                        ) ===
+                        title.innerHTML
+
+                );
+
+
+            if (!event) {
+
+                return;
+
+            }
+
+
+            const countdown =
+                card.querySelector(
+                    ".countdown"
+                );
+
+
+            if (
+                countdown
+            ) {
+
+                countdown.textContent =
+                    getCountdown(
+                        event
+                    );
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   HTML ESCAPING
+========================================================= */
 
 function escapeHTML(
     text
@@ -2474,7 +4200,9 @@ function escapeHTML(
 
 
     div.textContent =
-        text;
+        String(
+            text ?? ""
+        );
 
 
     return div.innerHTML;
@@ -2482,11 +4210,9 @@ function escapeHTML(
 }
 
 
-/*
------------------------------------------------------------
-START
------------------------------------------------------------
-*/
+/* =========================================================
+   START APPLICATION
+========================================================= */
 
 displayEvents();
 
@@ -2494,11 +4220,15 @@ updateClock();
 
 
 setInterval(
+
     updateClock,
+
     1000
+
 );
 
 </script>
+
 
 </body>
 </html>
